@@ -8,12 +8,33 @@ O QUE TENHO QUE FAZER?
 - a fatoração em binario ocorre no range de números até 2
 - pegar o resto do numero...
 '''
-a = True
-while a == True:
-    entrada = int(input("Informe um valor inteiro: "))
-    # receber numero int positivo
-    if entrada > 0:
-        n_bin = bin(entrada)
-        print(f"({n_bin}) e o binario de ({entrada})")
+entrada = int(input("Informe um valor inteiro: "))
+
+guardaRestos = 0
+guardaFatoracao = 0
+guardaEntradaAnterior = 0
+
+while entrada > 2:
+    #se resto = 0 guarde 0 em guardaRestos já print
+    if entrada % 2 == 0:
+    #pega a fatoreção para usar na proxima divisao
+        guardaEntradaAnterior = entrada
+        guardaFatoracao = guardaEntradaAnterior / 2 
+    #pega resto
+        guardaRestos = 0
+        print(guardaRestos)
+    #senaose resto = 1 guarde 1 em guardaRestos e já print
+    elif entrada % 2 == 1:
+    #pega a fatoreção para usar na proxima divisao
+        guardaEntradaAnterior = entrada
+        guardaFatoracao = guardaEntradaAnterior / 2 
+    #pega resto
+        guardaRestos = 0
+        print(guardaRestos)
+    else: print("VALOR INVALIDO")
+    
+
+            
 # vou precisar fazer um laço que calcule o resto desse numero até ele ser maior que 2
-# vou precisar de um (operador auxiliar que guardará os restos das divisões de forma que vá somando os seus resto) e um (operador que guardará a fatoração do numero até ele ser maior que 2)
+# vou precisar de um (operador auxiliar que guardará os restos das divisões de forma que vá os resto 
+# diretamente) e um (operador que guardará a fatoração do numero até ele ser maior que 2)
