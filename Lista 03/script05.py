@@ -6,7 +6,7 @@ O programa encerra quando o usuário informar o valor 0 (ZERO)
 # laço para enquanto a verdadeiro faça
 a        = True
 while a == True:
-    entrada = int(input("Informe um valor inteiro: "))
+    entrada = int(input("Informe um NUMERO que seja INTEIRO e POSITIVO ou 0 se quiser sair do programa: "))
     #se for positivo
     if entrada > 0:
         #se par, else impar
