@@ -12,43 +12,51 @@ entrada = int(input("Informe um valor inteiro: "))
 
 guardaRestos = 0
 guardaFatoracao = 0
-guardaEntradaAnterior = entrada
-contador = 0
+guardaEntradaAnterior = 0
+
 guardaFatoracao = guardaEntradaAnterior / 2 
 
 # talves eu precise de um contador que a cada vez que ele mudar 
 # fazer uma operação até o número ser maior que 2, se menor que 2 saia do loop
-a        = True
 
-while a == True:
+guardaEntradaAnterior = entrada
 
-    if guardaEntradaAnterior > 2:
+while entrada > 2:
+
+    
         #se resto = 0 guarde 0 em guardaRestos já print
         
         if guardaEntradaAnterior % 2 == 0:
-        
-        #pega a fatoreção para usar na proxima divisao
+            
+            #pega resto
+            guardaRestos = 0        
+            print(guardaRestos)
+
+            #pega a fatoração para usar na proxima divisao
             guardaFatoracao = guardaEntradaAnterior / 2 
 
-        #pega resto
-            guardaRestos = 0
-            print(guardaRestos)
-        
-        #senaose resto = 1 guarde 1 em guardaRestos e já print
+            guardaEntradaAnterior = guardaFatoracao 
+
+            entrada = guardaEntradaAnterior
+            #senaose resto = 1 guarde 1 em guardaRestos e já print
         elif guardaEntradaAnterior % 2 == 1:
-        
-        #pega a fatoreção para usar na proxima divisao
-            guardaFatoracao = guardaEntradaAnterior / 2 
-            
-        #pega resto
+
+            #pega resto
             guardaRestos = 1
             print(guardaRestos)
         
+            #pega a fatoração para usar na proxima divisao
+            guardaFatoracao = guardaEntradaAnterior / 2 
+
+            guardaEntradaAnterior = guardaFatoracao 
+            
+            entrada = guardaEntradaAnterior
+            
         else: 
             print("VALOR INVALIDO")
-            entrada = 0
+            guardaEntradaAnterior = 0
     
-    else: a = False
+    
         
 
             
